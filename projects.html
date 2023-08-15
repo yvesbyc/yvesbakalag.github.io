@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yves Bakalag's Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- animated css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-------------------------------------------------------------------------------------- header section -->
+
+     <!-- header start -->
+     <header class="header shadow-sm pt-3">
+      <div class="container">
+         <div class="header-main">
+           <!---------------------------------- Here is the logo path -->
+           <div class="logo pb-2">
+            <a href=""><img src="assets/images/logo.png" alt=""></a>
+          </div>
+            <div class="open-nav-menu">
+               <span></span>
+            </div>
+            <!----------------------------------- navigation menu start -->
+            <nav class="nav-menu">
+              <div class="close-nav-menu">
+                 <img src="img/close.svg" alt="close">
+              </div>
+              <ul class="menu">
+                 <li class="menu-item menu-item-has-children">
+                    <a href="index.html">Home</a>
+                 </li>
+                 <li class="menu-item">
+                  <a href="about.html">About</a>
+               </li>
+                 <li class="menu-item">
+                    <a href="skills.html">Skills</a>
+                 </li>
+
+                 <li class="menu-item">
+                    <a href="projects.html">Projects</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="#">Blog</a>
+                 </li>
+  
+              </ul>
+            </nav>
+            <!-- navigation menu end -->
+         </div>
+      </div>
+   </header>
+   <!-- header end -->
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------- project section -->
+<section>
+    <div class="extra_space">
+
+    </div>
+</section>
+<section id="projects">
+  <div class="project py-5">
+    <div class="container">
+      <div class="common_title">
+        <!-- project title -->
+        <h1 class="font-weight-bold text-center pb-5">PROJECTS</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-9 offset-md-2">
+          <div class="project_content  p-4 pb-5 mt-3 wow fadeInUp" data-wow-duration="2s">
+            <!-- <img class="img-fluid" src="assets/images/project_1.png" alt=""> -->
+               <div class="project_info my-4">
+                <div class="text-container">
+                  <h5>Azure Project Detection Lab</h5>
+                  <p>Having just finished an exciting project, I'm eager to share my journey with you. This endeavor involved Azure Resources, virtual machines, Azure Log Analytics Workspace, PowerShell, and Microsoft Sentinel (SIEM). Gratitude goes to CyberWox and his incredible YouTube Channel, an invaluable resource. I highly encourage exploring his content for further insights.</p>
+                  <p>This project helped me to test my proficiency in Threat detection, Investigation and how to respond to incidents by using a tool or technique in a controlled, home network.</p>
+                  
+                  <div class="toggle-container">
+                    <button id="read-more-button" class="read-more-button">Read More</button>
+                    <div id="content" class="content">
+                      <p class="pt-3">Steps:</p>
+                      <p> 1)	I created an Azure Subscription (<a href=" https://azure.microsoft.com/en-us/free/ "> https://azure.microsoft.com/en-us/free/ </a>) using my student email worth of $100 credit (No credit card information was required). Remember to delete the resources groups after completing the lab to avoid consuming your sub cost. </p>
+
+                      
+                      <img class="img-fluid" src="assets/images/project_1.png" alt="">
+                      
+
+                      <p>2)	On Azure Portal, I navigated Resource groups. To create a new resource group that would accommodate all the resources (Virtual Machine, Logs Analytics Workspace, and Microsoft Sentinel), I needed to provide the following details: Azure subscription, the new resource group name, and the Azure Location. During this step, I became aware that the chosen location impacts Azure Cloud costs. Once I had entered the required information, I proceeded by clicking the "Review + Create" button, followed by the "Create" button. </p>
+                      <p>3)	With the Resource Group in place, I proceeded to create a virtual machine. I initiated this process by searching for "virtual machine" in the search bar of the Azure portal. Afterward, I completed the necessary fields, providing a name for the virtual machine, selecting a region, choosing an image, and specifying a username and password for authentication and VM login. Once I confirmed the remaining default settings, I proceeded by clicking the "Review + Create" button, followed by the "Create" button. </p>
+
+                      <img class="img-fluid" src="assets/images/project_under_1.png" alt="">
+                      
+                      <img class="img-fluid" src="assets/images/project_under_2.png" alt="">
+                      
+
+                      <p>4)	I created a log repository in Azure (called a log analytics workspace which was used to ingest our logs from the VM).</p>
+                      <p>5)	Moving forward, I proceeded to deploy Microsoft Sentinel, which is essential for collecting and ingesting data from our VM. Within the Azure portal's search bar, I located and selected "Microsoft Sentinel," followed by clicking on "Add." I opted to use my existing Log Analytics Workspace. Afterward, I reviewed the configuration and clicked the "Review + Create" button before finalizing by clicking "Create." Once the deployment concluded, I navigated to the "Overview" section in the left pane. This presented a graphical representation of real-time events and incidents.</p>
+
+                      <img class="img-fluid" src="assets/images/project_under_3.png" alt="">
+                      
+                      <img class="img-fluid" src="assets/images/project_under_4.png" alt="">
+                      
+
+                      <p>6)	During the VM creation process, a default setting was utilized that included the selection of RDP ports (3389) under Inbound port rules. This configuration allowed RDP traffic from any source to any destination, thereby rendering our VM discoverable. From a security perspective, this left our VM vulnerable to potential attacks from around the globe. I took measures to mitigate such risks. Specifically, I implemented a security feature known as "Just in Time" access.</p>
+                      <img class="img-fluid" src="assets/images/project_under_5.png" alt="">
+                      
+                      <img class="img-fluid" src="assets/images/project_under_6.png" alt="">
+                      
+                      <p>7.	The subsequent step in my journey involved harnessing data connectors and establishing a data collection rule to ingest information from our VM. To facilitate the importation of data from the VM into Microsoft Sentinel, I followed these steps:</p>
+
+                      <div class="list_stle">
+                        <li>Navigated to Microsoft Sentinel within the Azure portal.</li>
+                        <li>Accessed the Data connectors menu to configure the data connector.</li>
+                        <li>Chose the Windows Security Events via AMA data connector.</li>
+                        <li>Clicked the "Open connector page" button.</li>
+                        <li>Proceeded to click "Add Data collection rule."</li>
+                        <li>Named the Data collection rule and associated it with our resource group.</li>
+                        <li>Added our Resource group by clicking Resources, followed by Add Resources.</li>
+                        <li>Applied the changes and then clicked Collect.</li>
+                        <li>Verified the settings and finalized the process by clicking "Review + Create" and then "Create."</li>
+                      </div>
+
+                      <p>7)	Upon the successful completion of the data collection rule, it became evident that Windows Security Events via AMA had become integrated with the Microsoft Sentinel Instance. This was clearly observable by clicking on the "Incidents" option in the left pane.</p>
+
+                      <img class="img-fluid" src="assets/images/project_under_7.png" alt="">
+                      
+
+                      <p>8)	My next task was to forward Windows security events directly in real time from the logs to Microsoft Sentinel and my Log Analytics Workspace. Logged in to the VM via RDP, authenticated with Username and Password I created at the beginning of this project. Once within the VM, I navigated to Event Viewer where I could effectively to observe events from standard logs, such as System, Security, Setup, Forwarded Events. I clicked on Security and I can see all the security events on the VM. One way to check if we had successfully logged on was to take a look at event 4624.</p>
+
+
+                      <p>9)	Within an enterprise setting, the main goal of a SIEM such as Microsoft Sentinel is to collect data from all endpoints and virtual machines, streamlining the process for analysts to access required information in real-time thus investigate log data for incident response to cyberattacks and data breaches. As I was progressing in this project, here I used KQL (Kusto Query Language) to write queries that will help fetch, filter, analyze, and visualize data. From Azure Sentinel portal, I clicked on the left pane Logs, in the Query window I entered the following custom Query </p>
+
+
+                      <img class="img-fluid" src="assets/images/project_under_8.png" alt="">
+                      
+                      <p>which displayed a list of all the times we have had a successful login on our VM.</p>
+                       <p>10)	Building upon the preceding steps, we successfully established a connection between our VM and Microsoft Sentinel, the objective was to generate custom rules capable of searching for specific criteria throughout the environment. These rules would trigger incidents whenever the predefined criteria were met, thereby enhancing our ability to detect potential threats and facilitate subsequent investigation.  </p>
+                    </div>
+                  </div>
+                </div>
+               </div>
+          </div>
+         </div>
+     </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------------------ footer section -->
+      <section>
+        <footer class="bg-dark py-4 text-center" >
+          <div class="container">
+            <p class="text-white">Copyright © 2023 Yves Bakalag | All Rights Reserved</p>
+          </div>
+        </footer>
+      </section>
+
+
+
+
+<!-- project read more toggole js -->
+
+<script>
+const readMoreButton = document.getElementById('read-more-button');
+const content = document.getElementById('content');
+
+let isContentExpanded = false;
+
+readMoreButton.addEventListener('click', () => {
+  if (!isContentExpanded) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+    readMoreButton.textContent = 'Read Less';
+  } else {
+    content.style.maxHeight = '0';
+    readMoreButton.textContent = 'Read More';
+  }
+  
+  isContentExpanded = !isContentExpanded;
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+ <!---------------------- animated js -->
+<script src="js/wow.min.js"></script>
+
+<!---------------------- scrpit for animated -->
+<script>
+new WOW().init();
+</script>
+
+
+<!-- custom js -->
+ <script src="js/custom.js"></script> 
+
+</body>
+</html>

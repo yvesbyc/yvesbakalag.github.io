@@ -1,0 +1,487 @@
+
+/*------------------------------------------------------------------ common css */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+p {
+  color: #6c6c6c;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+li {
+  color: #616161;
+}
+.extra_space{
+  padding-top: 75px;
+}
+
+
+
+
+/*-----------------------------------------------------------------------menubar css*/
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.header .logo {
+  padding: 0 15px;
+}
+.logo img {
+  width: 21%;
+  border-radius: 3px;
+}
+
+.logo h4 {
+  color: #000000;
+  font-weight: 600;
+}
+
+.header .nav-menu {
+  padding: 0 15px;
+}
+
+.header .menu>.menu-item {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+}
+
+/*------------------------ if you want change the menubar typography. just change here color property */
+
+.header .menu>.menu-item>a {
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/*---------------------- if you want to change menuar list hover color, just change color property */
+
+.header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
+.header .menu>.menu-item:hover>a {
+  color: #05a0e8;
+  ;
+}
+
+
+.header .open-nav-menu {
+  height: 34px;
+  width: 40px;
+  margin-right: 15px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-bottom: 8px;
+}
+
+
+/*--------------------- Responsive hamburger typography starts here */
+
+.header .open-nav-menu span {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: #000000;
+  position: relative;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before {
+  top: -7px;
+}
+
+.header .open-nav-menu span:after {
+  top: 7px;
+}
+
+.header .close-nav-menu {
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff;
+  margin: 0 0 15px 15px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .close-nav-menu img {
+  width: 16px;
+}
+
+.header .menu-overlay {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* srcoll up button */
+
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+.btn {
+  background: #dff3fc;
+  border: none;
+  color: #149ddd;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:first-child:hover,
+:not(.btn-check)+.btn:hover {
+  color: #fff;
+  background: #149ddd;
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+/*--------------------- Responsive hamburger typography end here */
+
+/* responsive for mobile devices*/
+
+@media(max-width: 991px) {
+  .header .menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .header{
+    padding-bottom: 10px;
+    padding-top: 20px !important;
+  }
+  /*------------------ you can change background color for mobile devices */
+  .header .nav-menu {
+    position: fixed;
+    right: -280px;
+    visibility: hidden;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+    ;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.5s ease;
+  }
+
+  .header .nav-menu.open {
+    visibility: visible;
+    right: 0px;
+  }
+
+  .header .menu>.menu-item {
+    display: block;
+    margin: 0;
+  }
+
+  .header .menu>.menu-item-has-children>a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*---------------------- you can change menubar list color and border for mobile devices */
+  .header .menu>.menu-item>a {
+    color: #000000;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .header .menu>.menu-item:first-child>a {
+    border-top: 1px solid #cbcbcb;
+  }
+
+  .header .close-nav-menu,
+  .header .open-nav-menu {
+    display: flex;
+  }
+
+
+
+}
+
+
+/*------------------------------------------------------------------------------ experience css */
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.position-relative.mb-4 {
+  padding: 15px 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.position-relative h5 span {
+    font-size: 16px;
+    color: #605f5f;
+    font-weight: 700;
+  
+}
+
+h1,
+.font-weight-bolder {
+  font-weight: 700 !important;
+}
+
+.text-primary {
+  color: #0BCEAF !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.display-1 {
+  font-size: 8rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .display-1 {
+    font-size: calc(2.125rem + 10.5vw);
+  }
+}
+
+
+.pl-4,
+.px-4 {
+  padding-left: 1.5rem !important;
+}
+
+.pt-2,
+.py-2 {
+  padding-top: 0.5rem !important;
+}
+
+.border-left {
+  border-left: 1px solid #dee2e6 !important;
+  border-left-color: rgb(222, 226, 230);
+}
+
+.border-primary {
+  border-color: #0BCEAF !important;
+}
+
+
+
+/*------------------------------------------------------------------------------------ hero css */
+.hero{
+  padding-top: 120px;
+  padding-bottom: 250px;
+  /* background: url(../assets/images/bg.png);
+  background-position: center center;
+  background-size: cover; */
+}
+.profile{
+ text-align: center;
+}
+.profile img {
+  border-radius: 50%;
+  width: 85%;
+  margin: 0 auto;
+}
+.hero_content span {
+  font-size: 55px;
+  font-weight: 700;
+  color: #149ddd;
+}
+.intro_about_me a {
+  color: #149ddd;
+  font-weight: 500;
+}
+
+
+.right_side_icon i {
+  font-size: 15px;
+  color: #0da1e6;
+  width: 36px;
+  height: 36px;
+  line-height: 37px;
+  background: #dff3fc;
+  text-align: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin: 0px 5px;
+}
+
+.right_side_icon i:hover {
+  background: #149ddd;
+  color: #fff;
+}
+
+.resume_button a {
+  padding: 10px 34px;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s;
+
+}
+
+.resume_button a:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #000;
+}
+
+
+/*---------------------------------------------------------------------------------- skills css */
+.justified-class {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill_content {
+  padding: 30px 50px;
+  margin: 10px 10px 10px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-left: 3px solid chocolate;
+}
+
+.skill_content {
+  width: 355px;
+}
+
+
+/*------------------------------------------------------------------------------------- project css */
+.project_content{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+.project_content h5 {
+  text-transform: capitalize;
+}
+.toggle-container {
+  margin-top: 10px;
+}
+button#read-more-button {
+  border: 1px solid #000;
+  background: transparent;
+  transition: 0.3s;
+}
+button#read-more-button:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #000;
+}
+.read-more-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.content p{
+  padding:15px 5px;
+}
+.content img{
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  padding: 20px 30px;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+  .about_img img {
+    width: 60%;
+}
+.extra_space{
+  padding-top: 50px;
+}
+.hero{
+  padding-top: 120px;
+  padding-bottom: 150px;
+  text-align: center;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 667px) {
+  .justified-class {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill_content {
+    width: 355px;
+  }
+
+  .hero_content.text-center h1 {
+    color: #000000;
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+  .hero_content p{
+    width: 90%; 
+  }
+}
+
+
+
+
+
+/*--------------------------------------------------------------- THank you */

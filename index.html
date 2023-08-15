@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yves Bakalag's Portfolio</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- animated css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-------------------------------------------------------------------------------------- header section -->
+
+     <!-- header start -->
+     <header class="header shadow-sm pt-3">
+      <div class="container">
+         <div class="header-main">
+           <!---------------------------------- Here is the logo path -->
+            <div class="logo pb-2">
+              <a href=""><img src="assets/images/logo.png" alt=""></a>
+            </div>
+            <div class="open-nav-menu">
+               <span></span>
+            </div>
+            <!----------------------------------- navigation menu start -->
+            <nav class="nav-menu">
+              <div class="close-nav-menu">
+                 <img src="img/close.svg" alt="close">
+              </div>
+              <ul class="menu">
+                 <li class="menu-item menu-item-has-children">
+                    <a href="index.html">Home</a>
+                 </li>
+                 <li class="menu-item">
+                  <a href="about.html">About</a>
+               </li>
+                 <li class="menu-item">
+                    <a href="skills.html">Skills</a>
+                 </li>
+
+                 <li class="menu-item">
+                    <a href="projects.html">Projects</a>
+                 </li>
+                 <li class="menu-item">
+                    <a href="#">Blog</a>
+                 </li>
+  
+              </ul>
+            </nav>
+            <!-- navigation menu end -->
+         </div>
+      </div>
+   </header>
+   <!-- header end -->
+
+
+
+
+<!-------------------------------------------------------------------------------------- hero or intro section -->
+
+<section>
+  <div class="extra_space">
+
+  </div>
+</section>
+<section class="hero">
+  <div class="hero_area">
+    <div class="container">
+      <div class="row flex-column-reverse flex-md-row">
+        <div class="col-md-9">
+             <div class="hero_content">
+             <!-- job title -->
+              <h2 class="wow fadeInUp" data-wow-duration="2s"><span>I'm Yves,</span> <br> a passionate Tech Enthusiast specializing in Cyber Security and Cloud, and an avid blogger sharing insights in the ever-evolving world of technology.</h2>
+             </div>
+                       <!-- social links -->
+                       <div class="right_side_icon mt-3 wow fadeInUp" data-wow-duration="1s">
+                        <a target="_blank" href=""><i class="fa-brands fa-github"></i></a>
+                        <a target="_blank" href="mailto:yvesbakalag6@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a target="_blank" href="tel:+240-334-8464"><i class="fa-solid fa-phone"></i></a>
+                      </div>
+
+                      <div class="intro_about_me mt-3 wow fadeInUp">
+                        <a href="about.html"> More About Me <i class="fa-solid fa-arrow-right-long"></i></a>
+                      </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="profile pb-2 wow fadeInRight">
+            <img class="img-fluid" src="assets/images/intro_profile.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------------------------ footer section -->
+      <section>
+        <footer class="bg-dark py-4 text-center" >
+          <div class="container">
+            <p class="text-white">Copyright © 2023 Yves Bakalag | All Rights Reserved</p>
+          </div>
+        </footer>
+      </section>
+
+
+
+<!---------------------------------------------------------------------------------------------- scroll tob button -->
+      <button type="button"class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+
+
+
+<!-------------------------------------------------------------------------------------------------------
+ --------------------------------------------------all js here---------------------------------------- -->
+
+
+
+<!-- project read more toggole js -->
+
+<script>
+const readMoreButton = document.getElementById('read-more-button');
+const content = document.getElementById('content');
+
+let isContentExpanded = false;
+
+readMoreButton.addEventListener('click', () => {
+  if (!isContentExpanded) {
+    content.style.maxHeight = content.scrollHeight + 'px';
+    readMoreButton.textContent = 'Read Less';
+  } else {
+    content.style.maxHeight = '0';
+    readMoreButton.textContent = 'Read More';
+  }
+  
+  isContentExpanded = !isContentExpanded;
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+ <!---------------------- animated js -->
+<script src="js/wow.min.js"></script>
+
+<!---------------------- scrpit for animated -->
+<script>
+new WOW().init();
+</script>
+
+
+<!-- custom js -->
+ <script src="js/custom.js"></script> 
+
+</body>
+</html>
